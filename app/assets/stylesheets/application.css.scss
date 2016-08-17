@@ -1,0 +1,45 @@
+/*
+ *= require_self
+ *= require fancybox
+ *= require_tree .
+ */
+
+ // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.datetime select:nth-child(1) {
+  width: 180px;
+  text-indent: 15px; 
+  float: left;
+}
+
+.datetime select:nth-child(2) {
+  width: 180px;
+  text-indent: 15px; 
+  float:left;
+}
+
+.datetime select:nth-child(3) {
+  width: 180px;
+  text-indent: 15px; 
+  float :left;
+  
+}
+
+#user_email{
+	clear:both;
+  margin-top:10px;
+}
+
+label{
+    display: block; 
+    padding-top: 5px;
+}
+
+label {
+      display: block;
+    margin-bottom: 10px;
+}
+
+

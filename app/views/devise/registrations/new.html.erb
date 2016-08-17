@@ -1,0 +1,43 @@
+<h2 style="margin-left:60px">Sign up</h2>
+<div class="col-md-6">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true }) do |f| %>
+      <%= devise_error_messages! %>
+    <div class="field">
+      <%= f.label:name %>
+      <%= f.text_field :name, class: "form-control" %> 
+    </div>
+    <div class="field">
+      <%= f.label:Profile_picture %>
+      <%= f.file_field :avatar, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label:phone_number %>
+      <%= f.text_field :phone_number, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label:Date_Of_Birth %>
+      <br>
+      <span class="datetime"><%= f.date_select :date_of_birth, { order: [:year, :month, :day] }, { class: "form-control " } %></span>
+      </br>
+    </div>
+    <div class="field">
+      <h5> <%= f.label :email %></h5>
+      <%= f.email_field :email, autofocus: true , class: "form-control"%>
+    </div>
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" ,class: "form-control" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Sign up", class: "btn btn-success"%>
+    </div>
+  <% end %>
+  <%= render "devise/shared/links" %>
+</div>

@@ -40,6 +40,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
    gem 'pry-byebug'
 end
+gem "paperclip", "~> 5.0.0"
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
