@@ -2,6 +2,9 @@
  *= require_self
  *= require fancybox
  *= require_tree .
+ *= require_tree ./DataTable/
+ *= require formtastic
+ *= require formtastic-bootstrap
  */
 
  // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"

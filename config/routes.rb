@@ -1,11 +1,21 @@
 Rails.application.routes.draw do
+  get 'patient/edit'
 
-  	devise_for :users
-			scope "/admin" do
-  	resources :users
+  devise_for :users
+	
+	scope "/admin" do
+  	resources :users do 
+  		get :handle_promotion
+  	end
 	end
-	 root to: "home#index"
+	
+	get 'home/choose_site', to: 'home#choose_site', :as => :choose_site
+
+	root to: "home#index"
+		 
+	resources :users
+
+	resources :patients
 	 
-	 resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

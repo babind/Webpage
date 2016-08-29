@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Web Development</title>
+    <title>
+      Web Development
+    </title>
       <%= csrf_meta_tags %>
       <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -13,10 +15,12 @@
     </div>
     <div class="container">
       <% if user_signed_in? %>
-        <%= current_user.is_admin?%>
-                              
+        <% if current_user.is_admin? %>       
+          <%= render :partial =>'layouts/admin' %>
+        <% else %>  
+          i am good
+        <% end %>        
        <% end %>
     </div>
-
   </body>
 </html>

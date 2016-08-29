@@ -1,0 +1,10 @@
+<div class="container">
+	<%= semantic_form_for @patient, :url => patient_path(@patient), :html => { :method => 'put'}  do |f| %>
+		<%= f.input :name %>
+		<%= f.input :email %>
+		<%= f.input :date_of_birth %>
+		<%= f.input :phone_number %>
+		<%= f.action :submit %>
+	<% end  %>
+</div>
+
